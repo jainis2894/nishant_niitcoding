@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class CheckDemo2 
+{
+	@Test
+	public void checkSize()
+	{
+		Demo2 d=new Demo2();
+	assertEquals(5,d.l.size());	
+	}
+	
+	
+}

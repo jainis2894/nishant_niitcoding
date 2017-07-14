@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+
+public class SaveToColl 
+{
+	static ArrayList<Employee> e;
+	void save()
+	{
+		e=new ArrayList<Employee>();
+		EmployeeDB db=new EmployeeDB();
+	}
+
+}

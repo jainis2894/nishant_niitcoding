@@ -1,0 +1,56 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+public class EmployeeDB 
+{
+static Connection con=null;
+static Statement st=null;
+
+ 
+ void connectDB() 
+	{
+	try{
+		Class.forName("com.mysql.jdbc.Driver");
+		 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/nis","root","pswd");
+		if(!con.isClosed())
+			System.out.println("Successfully connected to server");
+			
+		else
+				System.out.println("connection failed");
+		 st=con.createStatement();
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+	}
+void getEmployee()
+	{
+	connectDB();
+	try
+		{
+		ResultSet rs=st.executeQuery("select * from Employee");
+		while(rs.next())
+		{
+		System.out.println(rs.getInt(1)+"********"+rs.getString(2)+"************"+rs.getInt(3)+"*************"+rs.getDouble(4));
+		}
+		}
+			catch(Exception e)
+				{
+				System.out.println(e);
+				}
+		
+	}
+
+
+public static void main(String[] args) 
+		{
+			EmployeeDB e= new EmployeeDB();
+			e.getEmployee();
+			
+	
+		}
+}

@@ -1,0 +1,19 @@
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.Test;
+
+
+public class CheckDemo2 
+{
+	@Test
+	public void checkSize()
+	{
+		Demo2 d=new Demo2();
+		List<Integer> temp=d.toCheckSize();
+		assertEquals(5,temp.size());	
+	}
+	
+	
+}

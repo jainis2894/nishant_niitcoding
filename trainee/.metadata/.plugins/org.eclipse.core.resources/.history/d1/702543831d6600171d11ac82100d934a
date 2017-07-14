@@ -1,0 +1,20 @@
+
+public class LambdaHelloWorld {
+	interface MathOperation
+	{
+		int operation (int a,int b);
+	}
+	private int operate (int a,int b,MathOperation mathoperation)
+	{
+		return mathoperation.operation(a, b);
+		
+	}
+	public static void main(String args[])
+
+	{
+		LambdaHelloWorld tester =new LambdaHelloWorld();
+		MathOperation opertaion =(int a,int b)->a+b;
+		System.out.println("10+5 "+tester.operate(10,5,addition));
+	}
+
+}

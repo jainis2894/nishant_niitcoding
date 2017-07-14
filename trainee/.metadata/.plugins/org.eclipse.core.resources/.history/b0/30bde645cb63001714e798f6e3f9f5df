@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+
+public class Loan 
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the bank id");
+		int bid=sc.nextInt();
+		 System.out.println("press 1 for  car loan\npress 2 for Home loan \n press 3 for  general loan");
+		 int n=sc.nextInt();
+		 Statement st=DbConnect.con.createStatement();
+		 if(n==1)
+			 ResultSet rs=
+		
+	}
+}

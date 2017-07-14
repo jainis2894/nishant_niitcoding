@@ -1,0 +1,10 @@
+
+public class MessageUtilTestSuite {
+	@RunsWith(Suite.class)
+	@Suite.SuiteClasses({
+		TestJUnit1.class,
+		TestJUnit.class
+	});
+	})
+
+}

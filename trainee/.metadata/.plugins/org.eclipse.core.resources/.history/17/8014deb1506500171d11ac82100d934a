@@ -1,0 +1,11 @@
+	
+@RunsWith(Suite.class)
+@Suite.SuiteClasses({
+TestJUnit1.class,
+TestJUnit.class
+	})
+	
+public class MessageUtilTestSuite {
+
+
+}
